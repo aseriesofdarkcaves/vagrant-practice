@@ -42,3 +42,12 @@ Get more SSH details:
 ```
 vagrant ssh-config
 ```
+
+Explicitly run the Vagrant provisioner:
+```
+vagrant provision
+```
+
+## Ansible integration
+The `Vagrantfile` contains a provisioning configuration that uses ansible.
+This allows a playbook to execute when the `vagrant provision` command is run.

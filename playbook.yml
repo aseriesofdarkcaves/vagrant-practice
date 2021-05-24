@@ -1,0 +1,9 @@
+---
+- hosts: all
+  gather_facts: no
+  become: yes
+  tasks:
+    - name: Ensure Network Time Protocol is installed
+      yum: name=ntp state=present
+    - name: Ensure Network Time Protocol is running
+      service: name=ntpd state=started enabled=yes
